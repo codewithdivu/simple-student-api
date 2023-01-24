@@ -19,7 +19,7 @@ const studentSchema = new mongoose.Schema({
   },
   phone: {
     type: Number,
-    min: 10,
+    min: 2,
     max: 10,
     require: true,
     unique: [true, "there is already exists a number"],
@@ -32,6 +32,6 @@ const studentSchema = new mongoose.Schema({
 
 // we will create new collection
 
-const student = new mongoose.model("Student", studentSchema);
+const Student = new mongoose.model("Student", studentSchema);
 
-module.exports = student;
+module.exports = Student;
